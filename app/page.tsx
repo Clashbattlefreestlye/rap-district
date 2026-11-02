@@ -51,7 +51,7 @@ export default function Home() {
           <a href="#ranking" onClick={closeMenu}>RANKING</a>
           <a href="#beats" onClick={closeMenu}>BEATS</a>
         </nav>
-        <a className="header-login" href="#unete">ENTRAR <ArrowRight size={15} /></a>
+        <a className="header-login" href="/login">ENTRAR <ArrowRight size={15} /></a>
       </header>
 
       <section className="hero" id="inicio">
@@ -84,7 +84,7 @@ export default function Home() {
       </section>
 
       <section className="section minute-section" id="minuto">
-        <div className="minute-copy"><div className="eyebrow"><span /> 60 SEGUNDOS. CERO EXCUSAS.</div><h2>EL MICRO<br />ES <em>TUYO.</em></h2><p>Un beat, un minuto y todo lo que llevas dentro. Sube tu improvisación, reta a la comunidad y demuestra que tienes lo que hace falta.</p><a className="button button-light" href="#unete"><Mic2 size={17} /> QUIERO MI MINUTO <ArrowRight size={17} /></a></div>
+        <div className="minute-copy"><div className="eyebrow"><span /> 60 SEGUNDOS. CERO EXCUSAS.</div><h2>EL MICRO<br />ES <em>TUYO.</em></h2><p>Un beat, un minuto y todo lo que llevas dentro. Sube tu improvisación, reta a la comunidad y demuestra que tienes lo que hace falta.</p><a className="button button-light" href="/login"><Mic2 size={17} /> QUIERO MI MINUTO <ArrowRight size={17} /></a></div>
         <div className="minute-visual"><div className="minute-number">60<span>s</span></div><div className="sound-bars">{Array.from({ length: 34 }, (_, i) => <i key={i} style={{ height: `${18 + ((i * 37) % 75)}px` }} />)}</div><div className="minute-caption"><span>REC ●</span><span>RAP DISTRICT SESSIONS</span></div></div>
       </section>
 
@@ -108,7 +108,7 @@ export default function Home() {
         <p className="demo-note">CATÁLOGO DE MUESTRA · LAS LICENCIAS Y DESCARGAS SE ACTIVARÁN AL PUBLICAR EL CATÁLOGO.</p>
       </section>
 
-      <section className="join-section" id="unete"><div className="join-glow" /><div className="eyebrow"><span /> TU SITIO ESTÁ AQUÍ</div><h2>EL DISTRITO<br />NO SE <em>EXPLICA.</em><br />SE CONQUISTA.</h2><p>Crea tu perfil de MC y prepárate para entrar en la escena.</p><a className="button button-red" href="mailto:hola@rapdistrict.example?subject=Quiero%20unirme%20a%20RAP%20DISTRICT">QUIERO UNIRME <ArrowRight size={17} /></a><small>REGISTRO ONLINE EN PREPARACIÓN</small></section>
+      <section className="join-section" id="unete"><div className="join-glow" /><div className="eyebrow"><span /> TU SITIO ESTÁ AQUÍ</div><h2>EL DISTRITO<br />NO SE <em>EXPLICA.</em><br />SE CONQUISTA.</h2><p>Crea tu perfil de MC y prepárate para entrar en la escena.</p><a className="button button-red" href="/login">CREAR MI PERFIL <ArrowRight size={17} /></a><small>REGISTRO E INICIO DE SESIÓN</small></section>
 
       <footer className="footer"><a className="brand" href="#inicio"><span className="brand-mark">R<span>D</span></span><span className="brand-name">RAP<span>DISTRICT</span></span></a><p>LA CULTURA SE RESPETA. EL TALENTO SE DEMUESTRA.</p><span>© 2026 RAP DISTRICT</span></footer>
     </main>
