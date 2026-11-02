@@ -1,12 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 
 export default function AuthCallbackPage() {
   const router = useRouter();
-  const params = useSearchParams();
   const [message, setMessage] = useState("Estamos verificando tu acceso...");
   useEffect(() => {
     let active = true;
@@ -15,7 +14,7 @@ export default function AuthCallbackPage() {
         setMessage("No se pudo conectar con Supabase.");
         return;
       }
-      const code = params.get("code");
+      const code = new URLSearchParams(window.location.search).get("code");
       if (code) {
         const { error } = await supabase.auth.exchangeCodeForSession(code);
         if (error) {
@@ -29,6 +28,6 @@ export default function AuthCallbackPage() {
     }
     finish();
     return () => { active = false; };
-  }, [params, router]);
+  }, [router]);
   return <main className="auth-page"><section className="auth-card"><h1>RAP <em>DISTRICT.</em></h1><p className="auth-intro">{message}</p></section></main>;
 }
