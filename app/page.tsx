@@ -26,7 +26,7 @@ const ranking = [
 const beats = [
   { name: "Concrete Jungle", style: "BOOM BAP · 92 BPM", price: "GRATIS" },
   { name: "Red Zone", style: "TRAP · 140 BPM", price: "GRATIS" },
-  { name: "Underground", style: "DRILL ·  ejecutar BPM", price: "GRATIS" }
+  { name: "Underground", style: "DRILL · 142 BPM", price: "GRATIS" }
 ];
 
 export default function Home() {
