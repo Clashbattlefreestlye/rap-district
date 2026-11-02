@@ -5,8 +5,6 @@ import {
   ArrowDown,
   ArrowRight,
   AudioLines,
-  Crown,
-  Flame,
   Headphones,
   Menu,
   Mic2,
